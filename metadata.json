@@ -1,0 +1,6 @@
+{
+  "name": "Weather App - Real-Time Weather",
+  "description": "Real-time weather at your fingertips with current conditions, hourly & 7-day forecasts, air quality, and global search powered by OpenWeatherMap.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

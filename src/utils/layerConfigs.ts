@@ -1,0 +1,91 @@
+import { WeatherLayerConfig, WeatherLayerType } from '../types/weather';
+
+export const WEATHER_LAYERS: Record<WeatherLayerType, WeatherLayerConfig> = {
+  temperature: {
+    id: 'temperature',
+    label: 'Temperature',
+    description: 'Surface air thermal distribution & temperature field',
+    unitMetric: '°C',
+    unitImperial: '°F',
+    steps: [
+      { value: -20, label: '-20', color: '#4f46e5' },
+      { value: -5, label: '-5', color: '#06b6d4' },
+      { value: 10, label: '10', color: '#22c55e' },
+      { value: 20, label: '20', color: '#eab308' },
+      { value: 30, label: '30', color: '#f97316' },
+      { value: 40, label: '40+', color: '#be123c' },
+    ],
+  },
+  rain: {
+    id: 'rain',
+    label: 'Rain and Thunder',
+    description: 'Real-time precipitation radar & convective rain intensity',
+    unitMetric: 'mm/h',
+    unitImperial: 'in/h',
+    steps: [
+      { value: 0, label: '0', color: 'rgba(255,255,255,0.05)' },
+      { value: 1, label: 'Light (1)', color: '#00ffff' },
+      { value: 5, label: 'Mod (5)', color: '#00cc00' },
+      { value: 15, label: 'Heavy (15)', color: '#ffff00' },
+      { value: 30, label: 'Severe (30)', color: '#ff6600' },
+      { value: 50, label: 'Extreme (50+)', color: '#ff0000' },
+    ],
+  },
+
+  clouds: {
+    id: 'clouds',
+    label: 'Clouds',
+    description: 'NASA satellite cloud imagery & cloud optical depth',
+    unitMetric: '%',
+    unitImperial: '%',
+    steps: [
+      { value: 0, label: '0% Clear', color: 'rgba(255,255,255,0.05)' },
+      { value: 25, label: '25% Scattered', color: 'rgba(203, 213, 225, 0.35)' },
+      { value: 50, label: '50% Broken', color: 'rgba(148, 163, 184, 0.6)' },
+      { value: 75, label: '75% Overcast', color: 'rgba(226, 232, 240, 0.8)' },
+      { value: 100, label: '100% Dense', color: 'rgba(255, 255, 255, 0.95)' },
+    ],
+  },
+  humidity: {
+    id: 'humidity',
+    label: 'Humidity',
+    description: 'Relative atmospheric moisture percentage',
+    unitMetric: '%',
+    unitImperial: '%',
+    steps: [
+      { value: 20, label: '20% Dry', color: '#d97706' },
+      { value: 40, label: '40%', color: '#eab308' },
+      { value: 60, label: '60%', color: '#14b8a6' },
+      { value: 80, label: '80%', color: '#2563eb' },
+      { value: 100, label: '100% Sat', color: '#1e1b4b' },
+    ],
+  },
+  pressure: {
+    id: 'pressure',
+    label: 'Pressure',
+    description: 'Mean sea level barometric pressure & isobars',
+    unitMetric: 'hPa',
+    unitImperial: 'inHg',
+    steps: [
+      { value: 985, label: '985 Low', color: '#dc2626' },
+      { value: 1000, label: '1000', color: '#f97316' },
+      { value: 1013, label: '1013 Std', color: '#0284c7' },
+      { value: 1025, label: '1025', color: '#16a34a' },
+      { value: 1040, label: '1040 High', color: '#7c3aed' },
+    ],
+  },
+  radar: {
+    id: 'radar',
+    label: 'Weather Radar',
+    description: 'Live Doppler radar reflectivity & precipitation frames (RainViewer)',
+    unitMetric: 'dBZ',
+    unitImperial: 'dBZ',
+    steps: [
+      { value: 10, label: '10 Light', color: '#00ffff' },
+      { value: 25, label: '25 Moderate', color: '#00cc00' },
+      { value: 40, label: '40 Heavy', color: '#ffff00' },
+      { value: 55, label: '55 Intense', color: '#ff0000' },
+      { value: 65, label: '65+ Severe', color: '#ff00ff' },
+    ],
+  },
+};
